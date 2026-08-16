@@ -1,46 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Computer Science ePortfolio</title>
+
+    <title>CS 499 Computer Science ePortfolio</title>
 
     <style>
+        :root {
+            color-scheme: light dark;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 1050px;
             margin: 0 auto;
-            padding: 40px 25px;
-            line-height: 1.7;
-            color: #333;
+            padding: 0 28px 60px;
+            line-height: 1.75;
         }
 
         header {
-            border-bottom: 1px solid #ccc;
-            margin-bottom: 40px;
+            padding: 45px 0 25px;
+            border-bottom: 1px solid #777;
+            margin-bottom: 45px;
+        }
+
+        header h1 {
+            margin-bottom: 5px;
+            font-size: 2.3rem;
+        }
+
+        header p {
+            margin-top: 0;
+            font-size: 1.05rem;
         }
 
         nav {
-            margin: 20px 0;
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
         }
 
         nav a {
-            margin-right: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            width: 100%;
         }
 
         section {
-            margin-bottom: 50px;
+            margin-bottom: 65px;
+            scroll-margin-top: 25px;
         }
 
-        h1, h2 {
-            color: #222;
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #777;
+            padding-bottom: 10px;
         }
 
-        .artifact {
-            padding: 20px;
-            border: 1px solid #ddd;
-            margin: 20px 0;
-            border-radius: 6px;
+        h3 {
+            margin-top: 30px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin: 0 0 18px;
+        }
+
+        .intro {
+            font-size: 1.05rem;
+        }
+
+        .enhancement-card {
+            border: 1px solid #777;
+            border-radius: 8px;
+            padding: 28px;
+            margin: 30px 0;
+        }
+
+        .enhancement-card h3 {
+            margin-top: 0;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 9px 16px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            text-decoration: underline;
+        }
+
+        .skills {
+            margin: 15px 0 25px;
+            padding: 15px 18px;
+            border-left: 4px solid #777;
+        }
+
+        .skills strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            border-top: 1px solid #777;
+            padding-top: 25px;
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 0 18px 40px;
+            }
+
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .enhancement-card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -49,81 +160,655 @@
 
 <header>
     <h1>Computer Science ePortfolio</h1>
-    <p>CS 499 Computer Science Capstone</p>
+
+    <p>
+        CS 499 Computer Science Capstone
+    </p>
 
     <nav>
         <a href="#self-assessment">Self Assessment</a>
         <a href="#code-review">Code Review</a>
-        <a href="#enhancements">Enhancements</a>
+        <a href="#software-engineering">Software Engineering</a>
+        <a href="#algorithms">Algorithms</a>
+        <a href="#databases">Databases</a>
     </nav>
 </header>
 
+
 <main>
 
+<!-- =========================================================
+     PROFESSIONAL SELF ASSESSMENT
+========================================================= -->
+
 <section id="self-assessment">
+
     <h2>Professional Self Assessment</h2>
 
     <p>
-        My professional self assessment will be presented here as an
-        introduction to my computer science skills, experiences, and
-        professional development throughout the program.
+        Completing the Computer Science program has given me a much broader
+        understanding of the field than I had when I started. At the beginning
+        of the program, I mostly thought about programming in terms of learning
+        languages and getting code to work. As I progressed through different
+        courses, I started to understand how many other decisions go into
+        creating a successful computing solution. Software needs to be organized,
+        maintainable, secure, efficient, and understandable to people other than
+        the person who originally wrote it. Developing my ePortfolio for CS 499
+        gave me an opportunity to return to earlier work with that perspective
+        and recognize how much my approach to solving problems has changed
+        throughout the program.
     </p>
-</section>
-
-<section id="code-review">
-    <h2>Code Review</h2>
 
     <p>
-        This code review examines the original Travlr Getaways application
-        and identifies opportunities for improvement in software design,
+        One of the biggest strengths I developed during the program is the
+        ability to approach unfamiliar technical problems and work through them
+        logically. My coursework exposed me to several different areas of
+        computer science rather than a single type of development. I worked with
+        full stack web applications, mobile development, computational graphics,
+        embedded systems, databases, algorithms, security, and software design.
+        For example, in CS 350 I worked with embedded systems and developed a
+        thermostat project that required software to interact with hardware
+        components. In CS 405, I focused on secure coding practices and used tools
+        such as static code analysis to identify weaknesses in existing code.
+        These projects required different technologies and ways of thinking, but
+        they helped me become more comfortable learning new systems and
+        troubleshooting problems when the solution is not immediately obvious.
+    </p>
+
+    <p>
+        The program also changed the way I think about software engineering.
+        Earlier in my coursework, my main concern was usually whether a program
+        produced the correct result. Later courses showed me that working code is
+        only part of a successful solution. Code also needs to have a logical
+        structure that can be maintained and expanded. I gained experience with
+        concepts such as object oriented programming, reusable components,
+        separation of responsibilities, APIs, testing, and full stack
+        architecture. Working with the MEAN stack in CS 465 was especially useful
+        because I had to understand how MongoDB, Express, Angular, and Node.js
+        communicated as parts of one application. Instead of looking at the
+        frontend, backend, and database as completely separate pieces, I had to
+        understand how a change in one layer could affect the others.
+    </p>
+
+    <p>
+        My coursework also strengthened my understanding of data structures and
+        algorithms. I learned that there can be several technically correct
+        solutions to the same problem, but those solutions may have different
+        costs in terms of performance, complexity, and maintainability. Learning
+        about searching, sorting, data structures, and time complexity gave me a
+        better way to evaluate those choices. During CS 499, I applied this
+        knowledge by implementing searching and sorting functionality for trip
+        data and considering the efficiency of the algorithms being used. This
+        helped connect concepts such as linear search and merge sort to
+        functionality that a user could actually interact with. It also reinforced
+        the importance of selecting an approach based on the needs and size of the
+        problem rather than choosing an algorithm only because it works.
+    </p>
+
+    <p>
+        Database development has been another important part of my experience in
+        the program. I gained experience storing, retrieving, and updating data as
+        well as connecting persistent data to application functionality. Working
+        with MongoDB taught me how document based databases can fit naturally into
+        JavaScript applications. It also required me to think about how
+        information should be organized instead of simply storing everything that
+        might be useful. Through my later work with Travlr, I had to make decisions
+        about whether information should be duplicated or referenced from existing
+        records. This helped me understand that database design involves
+        considering consistency, maintainability, and how the application will
+        actually access the data.
+    </p>
+
+    <p>
+        Security became increasingly important to the way I evaluate software as
+        I moved through the program. CS 405 gave me experience examining code for
+        vulnerabilities and using secure coding practices instead of treating
+        security as something that is added after an application is finished. I
+        worked with static analysis, encryption concepts, input handling, and
+        identifying weaknesses that might not prevent a program from running but
+        could still create security problems. I carried that mindset into later
+        projects by considering how authentication information is stored and
+        validated, how protected API requests are handled, and whether the server
+        can trust information coming from the client. One of the most important
+        lessons I learned is that an application working correctly under normal
+        conditions does not necessarily mean it is secure.
+    </p>
+
+    <p>
+        Communication has also been an important part of developing my technical
+        skills. Computer science requires being able to explain why a solution was
+        chosen, not only being able to implement it. Throughout the program, I
+        created technical documentation, project explanations, diagrams,
+        discussion posts, presentations, and other forms of communication for
+        different audiences. The CS 499 code review was especially useful because
+        I had to walk through existing code, identify weaknesses, and explain
+        planned improvements in a way that another developer or manager could
+        follow. Creating the narratives for my ePortfolio required a similar skill
+        because I needed to explain the reasoning and learning behind each
+        enhancement rather than only describing the code that changed. These
+        experiences have made me more comfortable translating technical work into
+        clear explanations for stakeholders who may have different levels of
+        technical knowledge.
+    </p>
+
+    <p>
+        Collaboration is closely connected to that communication. Through
+        coursework involving software development practices, I learned how
+        development decisions are affected by requirements, feedback, changing
+        priorities, and the work of other people involved in a project. A good
+        collaborative environment requires clear documentation and communication
+        so that decisions are not dependent on one person's understanding of the
+        system. I also learned the importance of receiving feedback and using it
+        to improve a solution instead of treating the first implementation as
+        final. The process of reviewing earlier projects during the capstone
+        reinforced this because I had to look critically at my own previous
+        decisions and identify areas that could be improved.
+    </p>
+
+    <p>
+        Developing the ePortfolio brought these different areas together through
+        the Travlr Getaways application from CS 465. I selected Travlr because its
+        full stack architecture gave me opportunities to demonstrate several areas
+        of computer science within the same artifact. My software design and
+        engineering enhancement focused on improving the organization and
+        reliability of the application by separating responsibilities, improving
+        asynchronous authentication, adding reusable error handling, and
+        strengthening JWT handling. My algorithms and data structures enhancement
+        added searching and sorting functionality using linear search and merge
+        sort. My database enhancement extended the MongoDB implementation by
+        allowing authenticated users to save persistent favorite trips while
+        avoiding unnecessary duplication of trip information.
+    </p>
+
+    <p>
+        Together, these enhancements show more than three additional features.
+        They show how my approach to the same application changed after gaining
+        more experience. The original version demonstrated that I could build a
+        working full stack application. The enhanced versions demonstrate that I
+        can return to existing software, evaluate its weaknesses, consider
+        tradeoffs, and improve its structure, functionality, security, algorithms,
+        and data management. The code review and narratives also demonstrate my
+        ability to communicate those decisions and explain the reasoning behind
+        them.
+    </p>
+
+    <p>
+        Completing the Computer Science program has prepared me to enter a
+        technical career with a foundation that extends beyond any individual
+        programming language or framework. Technologies will continue to change,
+        so one of the most useful skills I have developed is the ability to learn
+        unfamiliar tools, break larger problems into manageable pieces, and
+        understand how different parts of a system interact. I am leaving the
+        program with experience across software engineering, algorithms,
+        databases, security, and technical communication, along with a better
+        understanding of how those areas support each other. My ePortfolio
+        represents that progression and provides examples of both the technical
+        work I can complete and the way I now approach computing problems as a
+        whole.
+    </p>
+
+</section>
+
+
+<!-- =========================================================
+     CODE REVIEW
+========================================================= -->
+
+<section id="code-review">
+
+    <h2>Informal Code Review</h2>
+
+    <p>
+        Before completing the three enhancements, I reviewed the original Travlr
+        Getaways application to identify areas where its structure, logic,
+        efficiency, security, and database functionality could be improved.
+    </p>
+
+    <p>
+        The code review walks through the original application's functionality
+        and explains the changes planned for software design and engineering,
         algorithms and data structures, and databases.
     </p>
 
-    <p>
-        Code review video coming soon.
-    </p>
+    <div class="links">
+
+        <!-- Replace # with your YouTube or video URL -->
+        <a class="button" href="#" target="_blank">
+            Watch Code Review
+        </a>
+
+    </div>
+
 </section>
 
-<section id="enhancements">
 
-    <h2>Artifact Enhancements</h2>
+<!-- =========================================================
+     SOFTWARE ENGINEERING
+========================================================= -->
+
+<section id="software-engineering">
+
+    <h2>Enhancement One: Software Design and Engineering</h2>
+
+    <div class="enhancement-card">
+
+        <h3>Overview</h3>
+
+        <p>
+            This enhancement focuses on improving the structure, reliability,
+            maintainability, and security of the Travlr application.
+        </p>
+
+        <div class="skills">
+
+            <strong>Skills Demonstrated</strong>
+
+            Separation of concerns, Angular services, asynchronous programming,
+            reusable error handling, JWT authentication, REST APIs, and secure
+            request validation.
+
+        </div>
+
+        <div class="links">
+
+            <a
+                class="button"
+                href="https://github.com/xrainelily/cs465-fullstack"
+                target="_blank">
+                View Original Artifact
+            </a>
+
+            <!-- Replace # with Enhancement 1 GitHub link -->
+            <a class="button" href="#" target="_blank">
+                View Enhanced Artifact
+            </a>
+
+        </div>
+
+        <h3>Narrative</h3>
+
+        <p>
+            The artifact I selected is the Travlr Getaways application that I
+            originally created in CS 465: Full Stack Development. Travlr is a
+            full stack web application built using the MEAN stack, including
+            MongoDB, Express, Angular, and Node.js. The application includes a
+            customer facing website and an Angular administrative interface where
+            authorized users can manage trip information. The backend handles API
+            requests and database communication, while JWT authentication
+            protects certain administrative features.
+        </p>
+
+        <p>
+            I selected Travlr for my portfolio because it demonstrates several
+            software development skills within one project. Creating the original
+            application required me to connect frontend and backend systems,
+            develop REST API endpoints, work with MongoDB, and implement
+            authentication. When reviewing the project for CS 499, I found that
+            although the application worked, there were areas where its overall
+            design and maintainability could be improved.
+        </p>
+
+        <p>
+            For the first enhancement, I separated trip and authentication
+            responsibilities within the application. The TripData service
+            previously handled both trip operations and authentication requests.
+            I changed the structure so TripData focuses on trip information while
+            the Authentication service handles login, registration, token
+            storage, and validation. I also improved the login process. The
+            original version used a timeout to check whether authentication had
+            completed, while the enhanced version responds directly to the result
+            of the asynchronous request, making the login process more reliable
+            and easier to understand.
+        </p>
+
+        <p>
+            I also added reusable error handling for API requests. Previously,
+            several errors were mainly written to the console, which did not
+            provide useful feedback to the user. The enhanced application provides
+            consistent messages when operations such as loading, adding, or
+            editing trips fail while still recording technical information for
+            debugging. I also strengthened JWT handling by accounting for missing,
+            malformed, and expired tokens and improving how protected requests are
+            validated by the backend.
+        </p>
+
+        <p>
+            I originally planned for this enhancement to support course outcomes
+            three and four, and I believe both were met. The enhancement required
+            me to evaluate an existing solution, identify weaknesses in its logic
+            and design, and apply practices such as separation of concerns,
+            reusable services, HTTP interception, and asynchronous programming. I
+            would also add outcome five to my outcome coverage because the JWT
+            improvements required me to consider how the application should
+            respond to invalid authentication data and potential security issues
+            rather than assuming every request or stored token is valid.
+        </p>
+
+        <p>
+            The enhancement process helped me realize that improving software does
+            not always require adding new features. When I originally developed
+            Travlr, I was mainly focused on getting each part of the application
+            working together. Reviewing it later allowed me to look more closely
+            at how the code was organized and whether some of my original
+            solutions were reliable and maintainable. The login timeout was a good
+            example because it could work, but depended on timing rather than the
+            actual completion of the authentication request.
+        </p>
+
+        <p>
+            The main challenge was making changes without disrupting the
+            connections between different parts of the application. Authentication
+            involves the login component, services, stored tokens, HTTP requests,
+            API routes, and backend validation, so even small changes could affect
+            several files. Working through these changes gave me a better
+            understanding of why organization and separation of responsibilities
+            matter in large applications. Overall, the enhancement helped me look
+            beyond whether code simply works and consider its structure,
+            reliability, security, and maintainability.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ALGORITHMS
+========================================================= -->
+
+<section id="algorithms">
+
+    <h2>Enhancement Two: Algorithms and Data Structures</h2>
+
+    <div class="enhancement-card">
+
+        <h3>Overview</h3>
+
+        <p>
+            This enhancement improves how users interact with trip information by
+            adding searching and sorting functionality to the existing Travlr
+            application.
+        </p>
+
+        <div class="skills">
+
+            <strong>Skills Demonstrated</strong>
+
+            Linear searching, merge sort, time complexity, data organization,
+            reusable TypeScript services, comparison logic, and algorithmic
+            problem solving.
+
+        </div>
+
+        <div class="links">
+
+            <a
+                class="button"
+                href="https://github.com/xrainelily/cs465-fullstack"
+                target="_blank">
+                View Original Artifact
+            </a>
+
+            <!-- Replace # with Enhancement 2 GitHub link -->
+            <a class="button" href="#" target="_blank">
+                View Enhanced Artifact
+            </a>
+
+        </div>
+
+        <h3>Narrative</h3>
+
+        <p>
+            The artifact I selected is the Travlr Getaways application that I
+            originally created in CS 465: Full Stack Development. Travlr is a
+            full stack web application built using the MEAN stack, including
+            MongoDB, Express, Angular, and Node.js. The application includes a
+            customer facing website and an Angular administrative interface where
+            authorized users can manage trip information. For this enhancement, I
+            focused on the way trip data is searched, sorted, and displayed.
+        </p>
+
+        <p>
+            I selected Travlr for my portfolio because the existing trip listing
+            provided a practical place to demonstrate algorithms and data
+            structures. The original application could retrieve and display trip
+            records, but users did not have a convenient way to search through the
+            data or organize the results. I improved the application by adding
+            reusable searching and sorting functionality that makes the trip
+            collection easier to navigate.
+        </p>
+
+        <p>
+            For the second enhancement, I created a TripSearchSort service that
+            handles the algorithmic logic separately from the trip listing
+            component. Users can search by trip name, code, resort, or
+            description, and the displayed results update based on the search
+            term. The search uses a linear approach that checks the relevant
+            fields of each trip. This has O(n) time complexity because each trip
+            may need to be examined once to determine whether it matches the
+            search.
+        </p>
+
+        <p>
+            I also added sorting options for trip name and price. Instead of
+            relying only on JavaScript's built in sort function, I implemented
+            merge sort so the enhancement demonstrates a specific sorting
+            algorithm. Merge sort divides the trip collection into smaller
+            groups, sorts those groups recursively, and then merges them back
+            together in the correct order. Its O(n log n) time complexity
+            provides predictable performance as the amount of trip data
+            increases. The same algorithm can sort alphabetically by name or
+            numerically by price depending on the option selected by the user.
+        </p>
+
+        <p>
+            I originally planned for this enhancement to support course outcomes
+            three and four, and I believe both were met. Outcome three is
+            demonstrated by designing a solution using searching and sorting
+            principles and considering the efficiency and tradeoffs of the
+            algorithms selected. Outcome four is demonstrated through the use of
+            TypeScript, Angular services, reusable functions, and algorithmic
+            techniques to add useful functionality to an existing application.
+        </p>
+
+        <p>
+            The enhancement process helped me better understand how algorithms can
+            support features that appear simple from a user's perspective.
+            Searching and sorting trip data required decisions about which fields
+            should be compared, how values should be normalized, and how the
+            original collection should be handled. I kept the original trip data
+            separate from the displayed results so filtering and sorting would not
+            permanently modify the source collection. This made the behavior
+            easier to manage when the user changes or clears a search.
+        </p>
+
+        <p>
+            The main challenge was adding the new algorithmic functionality
+            without interfering with the existing trip listing or the improvements
+            made during the first enhancement. Separating the search and sorting
+            logic into its own service helped keep the component from becoming
+            unnecessarily complex. Overall, this enhancement improved the
+            usability of Travlr while giving me a practical way to demonstrate
+            searching, sorting, time complexity, reusable code, and algorithmic
+            problem solving.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DATABASES
+========================================================= -->
+
+<section id="databases">
+
+    <h2>Enhancement Three: Databases</h2>
+
+    <div class="enhancement-card">
+
+        <h3>Overview</h3>
+
+        <p>
+            This enhancement expands the application's MongoDB implementation by
+            allowing authenticated users to save and remove persistent favorite
+            trips.
+        </p>
+
+        <div class="skills">
+
+            <strong>Skills Demonstrated</strong>
+
+            MongoDB, Mongoose schemas, persistent storage, database querying,
+            REST API operations, data relationships, duplicate prevention, and
+            authenticated database access.
+
+        </div>
+
+        <div class="links">
+
+            <a
+                class="button"
+                href="https://github.com/xrainelily/cs465-fullstack"
+                target="_blank">
+                View Original Artifact
+            </a>
+
+            <!-- Replace # with Enhancement 3 GitHub link -->
+            <a class="button" href="#" target="_blank">
+                View Enhanced Artifact
+            </a>
+
+        </div>
+
+        <h3>Narrative</h3>
+
+        <p>
+            The artifact I selected for this enhancement is the Travlr Getaways
+            application that I originally created in CS 465: Full Stack
+            Development I. Travlr is a full stack web application built with
+            MongoDB, Express, Angular, and Node.js. The application stores trip
+            information in MongoDB and includes an administrative interface where
+            authorized users can manage the available trips. I continued using
+            this artifact because it already had a working database structure that
+            gave me a good starting point for adding more user specific data.
+        </p>
+
+        <p>
+            I included Travlr in my ePortfolio because it demonstrates how the
+            different parts of a full stack application work together. The
+            original project already used MongoDB and Mongoose to store users and
+            trips, but there was not much personalized information connected to
+            individual users. For this enhancement, I added the ability for an
+            authenticated user to save and remove favorite trips. This required
+            changes to the user schema, new database operations, protected API
+            routes, and frontend controls that communicate with the database
+            through the API.
+        </p>
+
+        <p>
+            One design choice I made was to store only the unique trip codes in
+            the user's favorites array instead of copying the entire trip document
+            into the user record. The complete trip information already exists in
+            the trips collection, so duplicating it would create unnecessary data
+            and could cause inconsistencies if a trip was later updated. When
+            favorites are requested, the application uses the saved trip codes to
+            query the existing trip documents. I also used MongoDB's addToSet
+            operation when saving a favorite so the same trip code is not added
+            more than once, and the pull operation removes a trip when the user no
+            longer wants it saved.
+        </p>
+
+        <p>
+            The enhancement also builds on the authentication work from my earlier
+            software design enhancement. All of the favorites API routes require
+            a valid JWT. The backend uses the authenticated user's ID from the
+            verified token to determine which user record should be updated
+            instead of accepting a user ID from the client. This keeps one user
+            from selecting another user's account when adding or removing
+            favorites and connects the database enhancement with secure data
+            handling.
+        </p>
+
+        <p>
+            In Module One, I planned for the database enhancement to support
+            outcomes three, four, and five. I believe the completed enhancement
+            supports all three. Outcome three is demonstrated through the database
+            design decision to reference existing trip records instead of
+            duplicating them. Outcome four is demonstrated by using MongoDB,
+            Mongoose, Express, Angular, and REST API operations together to add
+            useful persistent functionality to the application. Outcome five is
+            supported by protecting user specific database operations with
+            authentication and making sure the backend determines the correct user
+            from the verified token.
+        </p>
+
+        <p>
+            One thing I learned while completing this enhancement was that adding
+            a database feature involves more than changing the schema. The new
+            favorites field also needed controller logic, API routes, frontend
+            service methods, and interface changes before the feature was actually
+            useful. I had to think about how the data would move from the user
+            clicking a button all the way through the API to MongoDB and then back
+            to the interface. This helped me better understand how closely
+            connected the database is to the rest of a full stack application.
+        </p>
+
+        <p>
+            The main challenge was deciding how to store the favorite information
+            without making the database more complicated than necessary. Creating
+            a separate favorites collection was possible, but it would have added
+            another collection and more relationships for a fairly simple feature.
+            Storing trip codes in the existing user document kept the enhancement
+            smaller while still demonstrating persistent data storage, querying,
+            updating, and validation. Overall, this enhancement helped me become
+            more comfortable making database design decisions based on the needs
+            of the application instead of only focusing on whether I could store
+            the data.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PORTFOLIO SUMMARY
+========================================================= -->
+
+<section id="summary">
+
+    <h2>Portfolio Summary</h2>
 
     <p>
-        The artifact used throughout this ePortfolio is Travlr Getaways,
-        a full stack MEAN application originally created in CS 465.
-        The project was enhanced in three areas of computer science.
+        The three enhancements demonstrate the progression of the same full stack
+        application across several areas of computer science. The software design
+        enhancement improves the application's organization and security. The
+        algorithms enhancement improves how trip data is processed and presented.
+        The database enhancement adds persistent user specific functionality.
     </p>
 
-    <div class="artifact">
-        <h3>Software Design and Engineering</h3>
-
-        <p>
-            This enhancement improves the application's architecture,
-            authentication process, error handling, and security.
-        </p>
-    </div>
-
-    <div class="artifact">
-        <h3>Algorithms and Data Structures</h3>
-
-        <p>
-            This enhancement adds searching and sorting functionality
-            using linear search and merge sort.
-        </p>
-    </div>
-
-    <div class="artifact">
-        <h3>Databases</h3>
-
-        <p>
-            This enhancement expands the MongoDB implementation by
-            allowing authenticated users to save persistent favorite trips.
-        </p>
-    </div>
+    <p>
+        Together with the code review and professional self assessment, these
+        artifacts demonstrate growth in software engineering, algorithms and data
+        structures, database development, security, technical communication, and
+        the evaluation of existing computing solutions.
+    </p>
 
 </section>
 
 </main>
 
+
+<footer>
+
+    <p>
+        CS 499 Computer Science Capstone ePortfolio
+    </p>
+
+</footer>
+
 </body>
+
 </html>
