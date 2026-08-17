@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-header">{{ trip.name }}</div>
+
+  <img
+    class="card-img-top"
+    src="assets/images/{{ trip.image }}"
+    alt="trip thumbnail"
+  />
+
+  <div class="card-body">
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ trip.resort }}
+    </h6>
+
+    <p class="card-subtitle my-3 text-muted">
+      {{ trip.length }} only
+      {{ trip.perPerson | currency: 'USD':'symbol' }}
+      per person
+    </p>
+
+    <p
+      class="card-text"
+      [innerHTML]="trip.description"
+    ></p>
+
+    <div
+      *ngIf="favoriteMessage"
+      class="alert alert-danger"
+      role="alert"
+    >
+      {{ favoriteMessage }}
+    </div>
+  </div>
+
+  <div *ngIf="isLoggedIn()" class="card-footer">
+    <button
+      (click)="editTrip(trip)"
+      class="btn btn-info me-2"
+    >
+      Edit Trip
+    </button>
+
+    <button
+      (click)="toggleFavorite()"
+      class="btn btn-secondary"
+    >
+      {{ isFavorite ? 'Remove Favorite' : 'Save Favorite' }}
+    </button>
+  </div>
+</div>

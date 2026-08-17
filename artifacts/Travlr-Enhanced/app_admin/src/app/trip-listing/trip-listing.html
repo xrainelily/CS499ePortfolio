@@ -1,0 +1,65 @@
+<div *ngIf="isLoggedIn()">
+  <button (click)="addTrip()" class="btn btn-info">
+    Add Trip
+  </button>
+</div>
+
+<div class="row mt-3 mb-3">
+  <div class="col-md-6">
+    <label for="tripSearch">Search trips</label>
+    <input
+      id="tripSearch"
+      name="tripSearch"
+      type="text"
+      class="form-control"
+      placeholder="Search by name, code, resort, or description"
+      [(ngModel)]="searchTerm"
+      (ngModelChange)="applySearchAndSort()"
+    />
+  </div>
+
+  <div class="col-md-4">
+    <label for="tripSort">Sort trips</label>
+    <select
+      id="tripSort"
+      name="tripSort"
+      class="form-control"
+      [(ngModel)]="sortOption"
+      (ngModelChange)="applySearchAndSort()"
+    >
+      <option value="name-asc">Name A to Z</option>
+      <option value="name-desc">Name Z to A</option>
+      <option value="price-asc">Price Low to High</option>
+      <option value="price-desc">Price High to Low</option>
+    </select>
+  </div>
+</div>
+
+<div
+  *ngIf="message"
+  class="alert alert-danger mt-2"
+  role="alert"
+>
+  {{ message }}
+</div>
+
+<div
+  *ngIf="!message && displayedTrips.length === 0"
+  class="alert alert-info mt-2"
+>
+  No trips match your search.
+</div>
+
+<div class="row">
+  <div
+    *ngFor="let trip of displayedTrips"
+    class="col-md-4"
+  >
+    <app-trip-card
+      [trip]="trip"
+      [favoriteCodes]="favoriteCodes"
+      class="card-deck mt-2"
+    >
+    </app-trip-card>
+  </div>
+</div>
